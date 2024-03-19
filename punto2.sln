@@ -1,25 +1,175 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.9.34622.214
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "punto2", "punto2\punto2.csproj", "{115F4021-03A9-46E1-AE56-D6FACF8D458D}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{115F4021-03A9-46E1-AE56-D6FACF8D458D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{115F4021-03A9-46E1-AE56-D6FACF8D458D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{115F4021-03A9-46E1-AE56-D6FACF8D458D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{115F4021-03A9-46E1-AE56-D6FACF8D458D}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CEE119BC-EC76-4069-AE73-EF2F2850E2FF}
-	EndGlobalSection
-EndGlobal
+//class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Cuenta banco = new Cuenta(-7685);
+//        int opc = 0;
+//        do
+//        {
+//            Console.WriteLine("------------Bienvenido a tu banco!------------ \n 1.Depositar \n 2. Retirar \n 3. Mostrar Saldo \n 4. Salir");
+//            opc = Convert.ToInt16(Console.ReadLine());
+
+//            switch (opc)
+//            {
+//                case 1:
+//                    banco.credit();
+//                    break;
+//                case 2:
+//                    banco.cargar();
+//                    break;
+//                case 3:
+//                    banco.mostrarSaldo();
+//                    break;
+//                case 4:
+//                    return;
+//                default: return;
+
+//            }
+
+//        } while (opc != 4);
+
+
+
+//    }
+
+//    class Cuenta
+//    {
+//        public int saldo;
+
+//        public Cuenta(int saldo)
+//        {
+//            if (saldo < 0)
+//            {
+//                saldo = 0;
+//                Console.WriteLine("El saldo es inválido!");
+//            }
+//            else
+//            {
+//                this.saldo = saldo;
+//            }
+
+
+
+
+//        }
+
+//        public void credit()
+//        {
+//            Console.WriteLine("Ingrese el monto a depositar");
+//            int deposito = Convert.ToInt32(Console.ReadLine());
+//            if (deposito <= 0)
+//            {
+//                return;
+//            }
+//            else
+//            {
+//                saldo += deposito;
+//                Console.WriteLine("Nuevo saldo: " + saldo);
+//            }
+
+
+//        }
+
+//        public void cargar()
+//        {
+//            Console.WriteLine("Cuánto desea retirar?: ");
+//            int retiro = Convert.ToInt32(Console.ReadLine());
+//            if (retiro > saldo)
+//            {
+//                Console.WriteLine("Lo sentimos, no puedes retirar este monto");
+//                return;
+//            }
+//            else
+//            {
+//                saldo -= retiro;
+//                Console.WriteLine("Nuevo saldo: " + saldo);
+
+//            }
+//        }
+
+//        public void mostrarSaldo()
+//        {
+//            Console.WriteLine("Su saldo es de: "+saldo);
+//        }
+
+
+
+//    }
+//}
+
+
+
+
+//class Punto2 {
+//    static void Main(string[] args)
+//    {
+//        Factura f1 = new Factura();
+
+//        f1.establecer();
+//        f1.obtener();
+//        f1.obtenerMontoFactura();
+//    }
+
+//    class Factura
+//    {
+//        public string numeroPieza;
+//        public string descripcionPieza;
+//        public int cantidad;
+//        public int precio;
+//        public int montoFactura;
+
+
+//        public Factura()
+//        {
+//            this.numeroPieza = numeroPieza;
+//            this.descripcionPieza = descripcionPieza;
+//            this.cantidad = cantidad;
+//            this.precio = precio;
+//            this.montoFactura = montoFactura;
+//        }
+
+//        public void establecer()
+//        {
+//            Console.WriteLine("Ingrese un número de pieza:");
+//            numeroPieza = Console.ReadLine();
+//            if (descripcionPieza == "" || descripcionPieza == " ")
+//            {
+//                return;
+//            }
+
+//            Console.WriteLine("\n Ingrese una descripción para la pieza:");
+//            descripcionPieza = Console.ReadLine();
+//            if (descripcionPieza == "" || descripcionPieza == " ")
+//            {
+//                return;
+//            }
+
+//            Console.WriteLine("\n Ingrese la cantidad de piezas:");
+//            cantidad = Convert.ToInt16(Console.ReadLine());
+//            if (cantidad <= 0)
+//            {
+//                cantidad = 0;
+//            }
+
+//            Console.WriteLine("\n Ingrese el precio unitario de la pieza:");
+//            precio = Convert.ToInt16(Console.ReadLine());
+//            if (precio <= 0)
+//            {
+//                precio = 0;
+//            }
+//        }
+
+//        public void obtener()
+//        {
+//            Console.WriteLine("\n Número de pieza: " + numeroPieza + "\n ----------");
+//            Console.WriteLine("Descripción de la pieza: " + descripcionPieza + "\n ----------");
+//            Console.WriteLine("Cantidad de piezas: " + cantidad + "\n ----------");
+//            Console.WriteLine("Precio de la pieza: " + precio + "\n ----------");
+//        }
+
+//        public void obtenerMontoFactura()
+//        {
+//            Console.WriteLine("\n El monto de la factura es: "+ (cantidad*precio));
+//        }
+//    }
+//}
